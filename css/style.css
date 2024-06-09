@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import "/css/colors.css";
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  font-family: monospace;
+}
+
+/* Utility classes */
+.nav-link {
+  color: var(--color-green);
+  font-size: 1.2em;
+}
+
+.nav-link.ativa {
+  color: var(--color-purple);
+}
+
+.nav-link:hover {
+  color: var(--color-green-alt);
+}
+
+.card time {
+  float: right;
+  color: var(--color-azure);
+}
+
+.card {
+  margin-right: auto;
+  margin-left: 1em;
+}
+
+.card:hover {
+  border: solid 2px var(--background-color-alt);
+  background-color: var(--background-color-alt);
+  animation: none;
+  transition: all 0.3s;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+}
+
+a:hover {
+  color: var(--color-azure);
+}
+
+s {
+  color: var(--color-red);
+  font-size: 1.2em;
+}
+
+pre {
+  color: var(--color-azure);
+  background-color: var(--background-color);
+  padding: 1em;
+  overflow: scroll;
+  border: solid 2px var(--color-azure);
+}
+
+hr {
+  margin-top: 1em;
+  border: dashed 2pt var(--color-grey);
+}
+
+ol,
+ul {
+  color: var(--color-azure);
+  font-size: 1.2em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+blockquote {
+  border-left: 3px solid var(--color-blue);
+  background-color: var(--background-color-alt);
+}
+
+blockquote>p,
+cite {
+  color: var(--color-blue);
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+nav>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 1em;
+  overflow: hidden;
+  position: static;
+}
+
+nav>ul>li {
+  display: inline;
+  padding: 5px;
+}
+
+nav>ul>li.left{
+  float: left;
+}
+
+nav>ul>li.right{
+  float: right;
+}
+
+hgroup>p,
+p {
+  color: var(--color-h2);
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+hgroup>p {
+  margin-top: 0em;
+}
+
+p {
+  margin-top: 1em;
+}
+
+hgroup>h1,
+h1 {
+  color: var(--color-h1);
+  font-size: 2em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+hgroup>h2,
+hgroup>h3,
+h2,
+h3 {
+  font-size: 1.5em;
+  color: var(--color-h2);
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+article {
+  margin: 10px;
+  padding: 10px;
+  border: solid 2px var(--color-alt);
+  background-color: var(--background-color-alt);
+  overflow: scroll;
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+article hgroup>h2,
+article hgroup>h3 {
+  font-size: 1.5em;
+  color: var(--color-h2);
+  margin-top: 0.5em;
+  line-height: 1;
+}
+
+.post-card>h3 {
+  font-size: 1.2em;
+}
+
+.post-card>p {
+  font-size: 1em;
+}
+
+.aside {
+  display: flex;
+  flex-wrap: wrap;
+  float: right;
+  margin-bottom: 1em;
+}
+
+aside {
+  width: 9em;
+  background-color: var(--color-alt);
+  margin-top: 0.55em;
+  margin-left: 2em;
+  margin-right: 1em;
+  padding: 1em;
+  border: solid 2px var(--color-grey);
+  border-radius: 5px;
+  flex: 100%;
+}
+
+aside>hgroup>h1 {
+  font-size: 1.33em;
+}
+
+aside>hgroup>p {
+  font-size: 1.1em;
+}
+
+.avatar {
+  width: 14em;
+  opacity: 90%;
+  border: solid 2px var(--color-azure);
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Mobile */
+@media only screen and (orientation: portrait) {
+
+  .nav-link {
+    color: var(--color-green);
+    font-size: 1.5em;
+  }
+
+  .mobile {
+    display: inline;
+  }
+
+  .card {
+    margin-left: auto;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  body {
+    margin: 0.6em;
+    margin-top: 1.5em;
+  }
+
+  blockquote>p,
+  cite {
+    font-size: 1em;
+  }
+
+  hgroup>h1,
+  h1 {
+    color: var(--color-h1);
+    font-size: 1.3em;
+    margin-bottom: 1;
+    margin-top: 1;
+  }
+
+  hgroup>h2,
+  hgroup>h3,
+  h2,
+  h3 {
+    font-size: 1em;
+    color: var(--color-h2);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+
+  hgroup>p,
+  p {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+  }
+
+  hgroup>p {
+    margin-top: 0em;
+  }
+
+  p {
+    margin-top: 1em;
+  }
+
+  s {
+    font-size: 0.9em;
+  }
+
+  aside {
+    display: none;
+  }
+
+  ol,
+  ul {
+    color: var(--color-azure);
+    font-size: 0.8em;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+}
+
