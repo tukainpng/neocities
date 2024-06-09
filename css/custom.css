@@ -20,6 +20,10 @@ article.neocities {
   border: solid 2px var(--color-yellow);
 }
 
+article.neocities img {
+  width: 50%;
+}
+
 article.github:hover {
   background-color: var(--color-purple);
 }
