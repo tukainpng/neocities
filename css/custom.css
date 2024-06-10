@@ -1,62 +1,27 @@
 @import "/css/style.css";
 
-article {
-  transition: all 0.8s;
-}
+article                               { transition: all 0.8s }
+article.github                        { border: solid 2px var(--color-purple) }
+article.linkedin                      { border: solid 2px var(--color-azure)  }
+article.raylib                        { border: solid 2px var(--color-blue)   }
+article.neocities                     { border: solid 2px var(--color-yellow) }
+article.neocities img                 { width: 50% }
 
-article.github {
-  border: solid 2px var(--color-purple);
-}
-
-article.linkedin {
-  border: solid 2px var(--color-azure);
-}
-
-article.raylib {
-  border: solid 2px var(--color-blue);
-}
-
-article.neocities {
-  border: solid 2px var(--color-yellow);
-}
-
-article.neocities img {
-  width: 50%;
-}
-
-article.github:hover {
-  background-color: var(--color-purple);
-}
-
-article.linkedin:hover {
-  background-color: var(--color-azure);
-}
-
-article.raylib:hover {
-  background-color: var(--color-blue);
-}
-
-article.neocities:hover {
-  background-color: var(--color-yellow);
-}
+article.github:hover                  { background-color: var(--color-purple) }
+article.linkedin:hover                { background-color: var(--color-azure)  }
+article.raylib:hover                  { background-color: var(--color-blue)   }
+article.neocities:hover               { background-color: var(--color-yellow) }
 
 article.github>hgroup>h3,
 article.raylib>hgroup>h3,
-article.linkedin>hgroup>h3 {
-  font-size: 1.2em;
-}
-
+article.linkedin>hgroup>h3            { font-size: 1.2em  }
 article.github>hgroup>p,
 article.raylib>hgroup>p,
-article.linkedin>hgroup>p {
-  font-size: 1em;
-}
+article.linkedin>hgroup>p             { font-size: 1em    }
 
 article.github:hover>hgroup>h3,
 article.github:hover>hgroup>p,
 article.raylib:hover>hgroup>h3,
 article.raylib:hover>hgroup>p,
 article.linkedin:hover>hgroup>h3,
-article.linkedin:hover>hgroup>p {
-  color: var(--background-color);
-}
+article.linkedin:hover>hgroup>p       { color: var(--background-color) }
