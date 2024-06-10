@@ -16,6 +16,8 @@
 .nav-link.ativa { color: var(--color-purple) }
 .nav-link:hover { color: var(--color-green-alt) }
 
+.voltar { position: fixed }
+
 .card time {
   float: right;
   color: var(--color-azure);
@@ -31,6 +33,32 @@
   background-color: var(--background-color-alt);
 }
 
+.about-site {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-site-source,
+.about-site-rss {
+  padding-right: 4em;
+  padding-left: 4em;
+  margin: 4px;
+  flex: 15%;
+}
+
+.about-site-rss>p,
+.about-site-source>p {
+  color: var(--color);
+  margin: 0;
+}
+
+.about-site-rss                 { border: solid 2px var(--color-orange) }
+.about-site-source              { border: solid 2px var(--color-purple) }
+.about-site-rss:hover           { background-color: var(--color-orange) }
+.about-site-source:hover        { background-color: var(--color-purple) }
+.about-site-rss:hover>p         { color: var(--background-color) }
+.about-site-source:hover>p      { color: var(--background-color) }
+
 body {
   background-color: var(--background-color);
   margin: 2em;
@@ -41,6 +69,7 @@ a {
   color: var(--color-blue);
 }
 
+time,
 a:hover { color: var(--color-azure) }
 
 s {
@@ -63,7 +92,7 @@ hr {
 
 ol,
 ul {
-  color: var(--color-azure);
+  color: var(--color-purple);
   font-size: 1.2em;
 }
 
@@ -100,6 +129,7 @@ nav>ul {
 nav>ul>li {
   display: inline;
   padding: 5px;
+  font-size: 1em;
 }
 
 nav>ul>li.left  { float: left   }
@@ -156,13 +186,11 @@ article hgroup>h3 {
 .post-card>p  { font-size: 1em    }
 
 .aside {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   float: right;
 }
 
 aside {
-  width: 9em;
   background-color: var(--color-alt);
   margin-bottom: 10px;
   margin-left: 2em;
@@ -170,7 +198,7 @@ aside {
   padding: 1em;
   border: solid 2px var(--color-grey);
   border-radius: 5px;
-  flex: 100%;
+  max-width: 50ch;
 }
 
 aside>hgroup>h1 { font-size: 1.33em }
@@ -200,10 +228,15 @@ aside>hgroup>p  { font-size: 1.1em  }
 
   .aside { display: none }
 
+  .voltar { position: static }
+
   body {
     margin: 0.6em;
     margin-top: 1.5em;
   }
+
+  li,
+  nav>ul>li { font-size: 0.7em }
 
   blockquote>p,
   cite { font-size: 1em }
@@ -244,7 +277,7 @@ aside>hgroup>p  { font-size: 1.1em  }
   ol,
   ul {
     color: var(--color-azure);
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
 
   img {

@@ -12,3 +12,4 @@ all:
 	cp -r img/* site/img
 	cp -r css/* site/css
 	cp -r *.html site
+	cp script.js site

@@ -14,26 +14,22 @@
   <title>${title}</title>
 </head>
 <body>
-<nav>
+<nav class="mobile">
     <ul>
       <li class="left">
-        <a class="nav-link ativa" href="/">
+        <a onclick="showPosts()" id="blog" class="nav-link ativa" href="#">
           ~/blog
         </a>
       </li>
       <li class="right">
-        <a class="nav-link" href="/rss.xml">
-          ~/rss
-        </a>
-      </li>
-      <li class="right">
-        <a class="nav-link mobile" href="/about.html">
+        <a onclick="showAbout(about)" id="sobre" class="nav-link mobile" href="#">
           ~/sobre
         </a>
       </li>
     </ul>
   </nav>
   <br>
+  <!-- Desktop -->
   <div class="aside">
   <aside>
     <img class="avatar" src="/img/favicon.webp">
@@ -107,6 +103,125 @@
       </article>
     </a>
   </aside>
+
+  <aside>
+    <hgroup>
+      <h1>
+        Mais
+      </h1>
+      <br>
+        <div class="about-site">
+          <a href="${siteurl}/rss.xml">
+            <article class="about-site-rss">
+              <p>RSS</p>
+            </article>
+          </a>
+          <a href="https://github.com/tukainpng/neocities">
+            <article class="about-site-source">
+              <p>Source</p>
+            </article>
+          </a>
+        </div>
+    </hgroup>
+  </aside>
+
+  <!-- Mobile -->
   </div>
-  <main>
+  <div id="about" style="display: none">
+    <article>
+      <img class="avatar" src="/img/favicon.webp">
+      <hgroup>
+        <h1>
+          Bem-vindo(a) ao meu blog!
+        </h1>
+        <p>
+          Aqui, eu falo sobre assuntos envolvendo partes do meu cotidiano, coisas
+          relacionadas à minha experiência com a programação, com o mundo Linux e
+          também outros softwares open-source.
+        </p>
+      </hgroup>
+    </article>
+    <article>
+      <hgroup>
+        <h1>
+          Sobre mim
+        </h1>
+        <p>
+          Algumas das minhas redes sociais, projetos e informações de contato.
+        </p>
+      </hgroup>
+
+      <a href="https://github.com/tukainpng">
+        <article class="github">
+          <hgroup>
+            <h3>
+              Github
+            </h3>
+            <p>
+              Apesar de não ser um fã do Github, no mundo em que vivemos ele
+              é quase que um requesito. Sendo assim, eu tenho um perfil lá.
+            </p>
+          </hgroup>
+        </article>
+      </a>
+
+      <a href="https://www.linkedin.com/in/diogo-fernandes-710193282/">
+        <article class="linkedin">
+          <hgroup>
+            <h3>
+              LinkedIn
+            </h3>
+            <p>
+              Como praticamente qualquer pessoa que vive no mundo atual, eu
+              também tenho um perfil no LinkedIn, então, caso você tenha
+              interesse no meu perfil, sinta-se a vontade para entrar em contato.
+            </p>
+          </hgroup>
+        </article>
+      </a>
+
+      <a href="https://github.com/tukainpng/raylib.ha">
+        <article class="raylib">
+          <hgroup>
+            <h3>
+              raylib.ha
+            </h3>
+            <p>
+              Bindings do raylib para a linguagem de programação Hare.<br>
+              Meu primeiro projeto envolvendo uma linguagem de programação.
+            </p>
+          </hgroup>
+        </article>
+      </a>
+
+      <a href="https://neocities.org/site/tukainpng">
+        <article class="neocities">
+          <img src="/img/neocities.webp"/>
+        </article>
+      </a>
+
+    </article>
+    <article>
+    <hgroup>
+      <h1>
+        Mais
+      </h1>
+      <br>
+        <div class="about-site">
+          <a href="${siteurl}/rss.xml">
+            <article class="about-site-rss">
+              <p>RSS</p>
+            </article>
+          </a>
+          <a href="https://github.com/tukainpng/neocities">
+            <article class="about-site-source">
+              <p>Source</p>
+            </article>
+          </a>
+        </div>
+    </hgroup>
+    </article>
+
+  </div>
+  <main id="main">
 
